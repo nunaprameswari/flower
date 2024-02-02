@@ -1,0 +1,34 @@
+{% extends 'nindia.html' %}
+
+{% block title %}
+Berita
+{% endblock title %}
+
+{% block menu %}
+<ul class="side-menu">
+    <li><a href="#"><i class="bx bxs-dashboard icon"></i> Dashboard</a>
+    </li>
+ </ul>
+<button class="button-datadiri" type="button">
+<li><a href="datadiri"><i class="bx bxs-dashboard icon"></i>Data Diri</a></button>
+<button class="button-berita" type="button">
+<a href="https://www.uim.ac.id/">Beranda UIM</a></button>
+<button class="button-instagram" type="button">
+<a href="https://www.instagram.com/nuna.prameswari/">Instagram</a></button>
+<button class="button-bonus" type="button">
+<a href="https://wa.me/qr/MA3HVXRGL2JWB1">Bonus</a></button>
+<button class="button-coba" type="button">
+<a href="index">coba</a></button>
+<button class="button-admin" type="button">
+<a href="admin">Admin</a></button></list>
+{% endblock menu %}
+
+{% block content %}
+<h1>Selamat Datang Di Django</h1>
+{% endblock content %}
+
+<ul>
+    {% for x in mymembers %}
+     <li> <a href="details/{{ x.id }}">{{ x.firstname }} {{x.lastname }}</a></li>
+    {% endfor %}
+</ul>
